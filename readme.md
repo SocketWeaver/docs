@@ -4,7 +4,6 @@ Work in progress...
 
 ## Dependency
 The Documentation is built with **MkDocs** and themed with **Material for MkDocs**.
-____
 
 ### MkDocs
 https://www.mkdocs.org/#installation
@@ -13,5 +12,4 @@ https://www.mkdocs.org/#installation
 https://squidfunk.github.io/mkdocs-material/
 
 ## Contributing
-____
-The docs are always being improved by our team and our community contributors.
+The Documentation is always being improved by our team and our community contributors.
