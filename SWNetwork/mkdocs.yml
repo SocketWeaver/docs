@@ -1,1 +1,52 @@
 site_name: My Docs
+theme:
+  name: 'material'
+  feature:
+    tabs: true
+
+nav:
+  - Overview: 
+    - SWNetwork SDK: index.md
+    - Installation: installation.md
+  - Tutorials:
+    - Top-Down Shooter:
+      - Introduction: tutorials/top-down/introduction.md
+      - Installation: tutorials/top-down/installation.md
+      - Setting up the NetworkClient: tutorials/top-down/set-up-the-networkclient.md
+      - Sync Player Transfrom: tutorials/top-down/sync-player-transform.md
+      - Setting up the SceneSpawner: tutorials/top-down/set-up-the-scenespawner.md
+      - Test and Play: tutorials/top-down/test-and-play.md
+      - Remote Events: tutorials/top-down/remote-events.md
+      - SyncProperties: tutorials/top-down/sync-properties.md
+
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
