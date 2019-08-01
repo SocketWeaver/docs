@@ -2,4 +2,4 @@
     cd SWNetwork
     mkdocs build
 )
-mv SWNetwork/site . && mv site docs
+rm -rf docs && mv SWNetwork/site . && mv site docs
