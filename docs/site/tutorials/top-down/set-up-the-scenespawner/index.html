@@ -1,0 +1,704 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>Setting up the SceneSpawner - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.11e41852.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#setting-up-the-scene-spawner" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="My Docs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                My Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Setting up the SceneSpawner
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../.." title="Overview" class="md-tabs__link">
+          Overview
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../introduction/" title="Tutorials" class="md-tabs__link md-tabs__link--active">
+          Tutorials
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="My Docs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Overview
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="SWNetwork SDK" class="md-nav__link">
+      SWNetwork SDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Tutorials
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Top-Down Shooter
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Top-Down Shooter
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../set-up-the-networkclient/" title="Setting up the NetworkClient" class="md-nav__link">
+      Setting up the NetworkClient
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sync-player-transform/" title="Sync Player Transfrom" class="md-nav__link">
+      Sync Player Transfrom
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Setting up the SceneSpawner
+      </label>
+    
+    <a href="./" title="Setting up the SceneSpawner" class="md-nav__link md-nav__link--active">
+      Setting up the SceneSpawner
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#player-prefab" title="Player Prefab" class="md-nav__link">
+    Player Prefab
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenespawner" title="SceneSpawner" class="md-nav__link">
+    SceneSpawner
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choose-a-unique-spawner-id" title="Choose a unique Spawner Id" class="md-nav__link">
+    Choose a unique Spawner Id
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-spawn-points" title="Creating Spawn Points" class="md-nav__link">
+    Creating Spawn Points
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-the-scenespawner-onready-event" title="Handling the SceneSpawner OnReady Event" class="md-nav__link">
+    Handling the SceneSpawner OnReady Event
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../test-and-play/" title="Test and Play" class="md-nav__link">
+      Test and Play
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../remote-events/" title="Remote Events" class="md-nav__link">
+      Remote Events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sync-properties/" title="SyncProperties" class="md-nav__link">
+      SyncProperties
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#player-prefab" title="Player Prefab" class="md-nav__link">
+    Player Prefab
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenespawner" title="SceneSpawner" class="md-nav__link">
+    SceneSpawner
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choose-a-unique-spawner-id" title="Choose a unique Spawner Id" class="md-nav__link">
+    Choose a unique Spawner Id
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-spawn-points" title="Creating Spawn Points" class="md-nav__link">
+    Creating Spawn Points
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-the-scenespawner-onready-event" title="Handling the SceneSpawner OnReady Event" class="md-nav__link">
+    Handling the SceneSpawner OnReady Event
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="setting-up-the-scene-spawner">Setting up the Scene Spawner<a class="headerlink" href="#setting-up-the-scene-spawner" title="Permanent link">&para;</a></h1>
+<p><small>5 - 10 minutes read</small></p>
+<hr />
+<h2 id="player-prefab">Player Prefab<a class="headerlink" href="#player-prefab" title="Permanent link">&para;</a></h2>
+<p>At this point, you have the Player <strong>RealTimeAgent</strong> set up. Select the Player GameObject in the Scene Hierarchy and drag it into the Prefabs folder in the Project Assets folder.</p>
+<p><img alt="SceneSpawner" src="../../../assets/prefabTopDown.gif" /></p>
+<h2 id="scenespawner">SceneSpawner<a class="headerlink" href="#scenespawner" title="Permanent link">&para;</a></h2>
+<p>Add a new Empty GameObject and name it <strong>SceneSpawner</strong>. Click the Add Component button and Search "Spawner",  select <strong>SceneSpawner</strong> to attach it to the new GameObject.</p>
+<p>Note that a <strong>NetworkSystemID</strong> component was attached to SceneSpawner GameObject automatically. <strong>NetworkSystemID</strong> component help SWNetwork to identify SWNetwork's internal GameObjects.</p>
+<p><img alt="SceneSpawner" src="../../../assets/networksystemID.png" /></p>
+<h2 id="choose-a-unique-spawner-id">Choose a unique Spawner Id<a class="headerlink" href="#choose-a-unique-spawner-id" title="Permanent link">&para;</a></h2>
+<p>The <strong>SceneSpawner</strong> instantiates and destroys Networked GameObjects in a Scene(GameObjects that have a <strong>NetworkID</strong> component). Make sure you give different <strong>SpawnerId</strong> to different **SceneSpawner**s.</p>
+<p>Our game only has one <strong>SceneSpawner</strong>, we can set its <strong>SpawnerId</strong> to 1.</p>
+<p><img alt="SceneSpawner" src="../../../assets/spawnerID.png" /></p>
+<h2 id="creating-spawn-points">Creating Spawn Points<a class="headerlink" href="#creating-spawn-points" title="Permanent link">&para;</a></h2>
+<p>Create an Empty GameObject and name it <strong>SpawnPoints</strong>, reset its position to (0, 0, 0).</p>
+<p>Create an Empty GameObject and name it <strong>SpawnPoint</strong>, and reset its position to (0, 0, 0)as well.</p>
+<p>Select an Icon for the SpawnPoint so we can easily find it in the Scene.</p>
+<p><img alt="SceneSpawner" src="../../../assets/spawnPointIcon.gif" /></p>
+<p>Select the <strong>SpawnPoint</strong> GameObject in the Hierarchy and drag it into the Prefabs Folder to create a <strong>SpawnPoint</strong> Prefab. </p>
+<p>Drag the <strong>SpawnPoint</strong> prefab into the <strong>SpawnPoints</strong> GameObject and create 4 <strong>SpawnPoints</strong>.</p>
+<p><img alt="SceneSpawner" src="../../../assets/addSpawnPoints.gif" /></p>
+<p>Move the **SpawnPoint**s to the places you like to spawn the players. Set the Position Y to 1.5 to make sure the players are spawned above the ground.</p>
+<p><img alt="SceneSpawner" src="../../../assets/spawnPointsPosition2.gif" /></p>
+<p>Select the <strong>SceneSpawner</strong> GameObject, open the <strong>Spawn Point</strong> section and set the Size to 4. Drag the SpawnPoint into the slots.</p>
+<p><img alt="SceneSpawner" src="../../../assets/spawnPointDragDrop.gif" /></p>
+<p>Adding the Player Prefab to the Scene Spawner
+Open the Player Prefabs section of the SceneSpawner, drag the Player Prefab into it.</p>
+<p><img alt="SceneSpawner" src="../../../assets/playerDragDrop.gif" /></p>
+<h2 id="handling-the-scenespawner-onready-event">Handling the SceneSpawner OnReady Event<a class="headerlink" href="#handling-the-scenespawner-onready-event" title="Permanent link">&para;</a></h2>
+<p>Open the GameSceneManager.cs script, and add a method to handle the OnReadyEvent of the SceneSpawner.</p>
+<p>Your GameSceneManager.cs script should look like:</p>
+<div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">UnityEngine.SceneManagement</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">SWNetwork</span><span class="p">;</span>
+<span class="err">​</span>
+<span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// Game scene manager manages game scenes state.</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">GameSceneManager</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">GameObject</span> <span class="n">winnerPanel</span><span class="p">;</span>
+    <span class="k">public</span> <span class="n">GameObject</span> <span class="n">gameOverPanel</span><span class="p">;</span>
+<span class="err">​</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Exit</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// TODO</span>
+        <span class="c1">// exit the game</span>
+    <span class="p">}</span>
+<span class="err">​</span>
+    <span class="c1">// OnSpawnerReady(bool alreadySetup) method is added to handle the On Ready Event.</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnSpawnerReady</span><span class="p">(</span><span class="kt">bool</span> <span class="n">alreadySetup</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;OnSpawnerReady &quot;</span> <span class="p">+</span> <span class="n">alreadySetup</span><span class="p">);</span>
+<span class="err">​</span>
+        <span class="c1">// Check alreadySetup to see if the scene has been set up before. </span>
+        <span class="c1">// If it is true, it means the player disconnected and reconnected to the game. </span>
+        <span class="c1">// In this case, we should not spawn a new Player GameObject for the player.</span>
+        <span class="k">if</span> <span class="p">(!</span><span class="n">alreadySetup</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// If alreadySetup is false, it means the player just started the game. </span>
+            <span class="c1">// We randomly select a SpawnPoint and ask the SceneSpawner to spawn a Player GameObject. </span>
+            <span class="c1">// we have 1 playerPrefabs so playerPrefabIndex is 0.</span>
+            <span class="c1">// We have 4 spawnPoints so we generated a random int between 0 to 3.</span>
+            <span class="kt">int</span> <span class="n">spawnPointIndex</span> <span class="p">=</span> <span class="n">Random</span><span class="p">.</span><span class="n">Range</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
+            <span class="n">NetworkClient</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">LastSpawner</span><span class="p">.</span><span class="n">SpawnForPlayer</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">spawnPointIndex</span><span class="p">);</span>
+<span class="err">​</span>
+            <span class="c1">// Tell the spawner that we have finished setting up the scene. </span>
+            <span class="c1">// alreadySetup will be true when SceneSpawn becomes ready next time.</span>
+            <span class="n">NetworkClient</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">LastSpawner</span><span class="p">.</span><span class="n">PlayerFinishedSceneSetup</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>In the SceneSpawner component, add a listener to the On Ready event. Select OnSpawnerReady(bool) in the GameSceneManager.cs script.</p>
+<div class="admonition warning">
+<p>Make sure to select the OnSpawnerReady method from the Dynamic bool section in the list..</p>
+</div>
+<p><img alt="SceneSpawner" src="../../../assets/spawnerOnReady.gif" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../sync-player-transform/" title="Sync Player Transfrom" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Sync Player Transfrom
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../test-and-play/" title="Test and Play" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Test and Play
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.9e1f3b71.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
