@@ -36,7 +36,7 @@
     
     
       
-        <title>Installation - My Docs</title>
+        <title>Updating Room States - My Docs</title>
       
     
     
@@ -72,7 +72,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#install-the-swnetwork-sdk" tabindex="1" class="md-skip">
+      <a href="#updating-room-states" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -98,7 +98,7 @@
                 My Docs
               </span>
               <span class="md-header-nav__topic">
-                Installation
+                Updating Room States
               </span>
             
           
@@ -313,20 +313,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Installation" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
       Installation
     </a>
-    
   </li>
 
         
@@ -418,11 +409,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../update-room-states/" title="Updating Room States" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Updating Room States
+      </label>
+    
+    <a href="./" title="Updating Room States" class="md-nav__link md-nav__link--active">
       Updating Room States
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#roompropertyagent" title="RoomPropertyAgent" class="md-nav__link">
+    RoomPropertyAgent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-the-playerscores-syncproperty" title="Adding the "PlayerScores" SyncProperty" class="md-nav__link">
+    Adding the "PlayerScores" SyncProperty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gamedata-and-playerscore" title="GameData and PlayerScore" class="md-nav__link">
+    GameData and PlayerScore
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -465,6 +508,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#roompropertyagent" title="RoomPropertyAgent" class="md-nav__link">
+    RoomPropertyAgent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-the-playerscores-syncproperty" title="Adding the "PlayerScores" SyncProperty" class="md-nav__link">
+    Adding the "PlayerScores" SyncProperty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gamedata-and-playerscore" title="GameData and PlayerScore" class="md-nav__link">
+    GameData and PlayerScore
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -476,9 +549,100 @@
               
                 
                 
-                <h1 id="install-the-swnetwork-sdk">Install the SWNetwork SDK<a class="headerlink" href="#install-the-swnetwork-sdk" title="Permanent link">&para;</a></h1>
-<hr />
-<p>Please follow the steps in the <a href="../../../installation/">Installation</a> page to install the SWNetwork SDK.</p>
+                <h1 id="updating-room-states">Updating Room States<a class="headerlink" href="#updating-room-states" title="Permanent link">&para;</a></h1>
+<p><small>3 - 5 minutes read</small></p>
+<h2 id="roompropertyagent">RoomPropertyAgent<a class="headerlink" href="#roompropertyagent" title="Permanent link">&para;</a></h2>
+<p>You have used the <strong>SyncPropertyAgent</strong> to update player properties. The <strong>RoomPropertyAgent</strong> is similar to the SyncPropertyAgent, but it is designed to update room level properties.</p>
+<ul>
+<li>
+<p>Select the GameManager GameObject in the Scene Hierarchy,</p>
+</li>
+<li>
+<p>Click the <strong>Add Component</strong> Button and search for "GameDataManager". Select <strong>RoomPropertyAgent</strong> to Attach it to the GameManager GameObject.</p>
+</li>
+</ul>
+<p><img alt="networkSystemID" src="../../../assets/networkSystemIDRoomPropertyAgent.png" /></p>
+<p>Similar to the <strong>SceneSpawner</strong>, a Network System ID component is attached automatically. You can have multiple RoomPropertyAgents, just make sure you assigned different Agent Id to them.</p>
+<h2 id="adding-the-playerscores-syncproperty">Adding the "PlayerScores" SyncProperty<a class="headerlink" href="#adding-the-playerscores-syncproperty" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Click <strong>Add Game Sync Property</strong> button and name the new <strong>SyncProperty</strong> "PlayerScores". Set its <strong>Type</strong> to <strong>Serializable</strong>.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Rules for wining the game</p>
+<p>For this tutorial, the player who killed opponents 3 times is the winner of the game. You can use serializable objects to store player scores.</p>
+</div>
+<h2 id="gamedata-and-playerscore">GameData and PlayerScore<a class="headerlink" href="#gamedata-and-playerscore" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Create a new script and call it GameDataModels.cs. </li>
+<li>Add GameData and PlayerScore Serializable Classes.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="err">​</span>
+<span class="na">[Serializable]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">PlayerScores</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Score</span><span class="p">&gt;</span> <span class="n">scores</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Score</span><span class="p">&gt;();</span>
+<span class="p">}</span>
+<span class="err">​</span>
+<span class="na">[Serializable]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Score</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">playerRemoteId</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">score</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<ul>
+<li>Update the GameSceneManager.cs script. It should have a reference to its <strong>RoomPropertyAgent</strong> component.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">RoomPropertyAgent</span> <span class="n">roomPropertyAgent</span><span class="p">;</span>
+<span class="err">​</span>
+<span class="k">private</span> <span class="k">void</span> <span class="nf">Start</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">roomPropertyAgent</span> <span class="p">=</span> <span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">RoomPropertyAgent</span><span class="p">&gt;();</span>
+<span class="p">}</span>
+</pre></div>
+
+<ul>
+<li>Add a method <code>public void PlayerScored(string)</code> to update the "PlayerScores" SyncProperty.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">PlayerScored</span><span class="p">(</span><span class="kt">string</span> <span class="n">playerId</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Read the current value of the &quot;PlayerScores&quot; SyncProperty.</span>
+    <span class="n">PlayerScores</span> <span class="n">playerScores</span> <span class="p">=</span> <span class="n">roomPropertyAgent</span><span class="p">.</span><span class="n">GetPropertyWithName</span><span class="p">(</span><span class="s">&quot;PlayerScores&quot;</span><span class="p">).</span><span class="n">GetValue</span><span class="p">&lt;</span><span class="n">PlayerScores</span><span class="p">&gt;();</span>
+<span class="err">​</span>
+    <span class="c1">// Initialize the playerScores object.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">playerScores</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">playerScores</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PlayerScores</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="err">​</span>
+    <span class="kt">bool</span> <span class="n">foundPlayerScore</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="err">​</span>
+    <span class="c1">// If player already have a score, increase it by 1.</span>
+    <span class="k">foreach</span> <span class="p">(</span><span class="n">Score</span> <span class="n">s</span> <span class="k">in</span> <span class="n">playerScores</span><span class="p">.</span><span class="n">scores</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">playerRemoteId</span> <span class="p">==</span> <span class="n">playerId</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">s</span><span class="p">.</span><span class="n">score</span><span class="p">++;</span>
+            <span class="n">foundPlayerScore</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="err">​</span>
+    <span class="c1">// If player has not scored yet, add a new score for the player and set its value to 1.</span>
+    <span class="k">if</span> <span class="p">(!</span><span class="n">foundPlayerScore</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Score</span> <span class="n">ps</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Score</span><span class="p">();</span>
+        <span class="n">ps</span><span class="p">.</span><span class="n">playerRemoteId</span> <span class="p">=</span> <span class="n">playerId</span><span class="p">;</span>
+        <span class="n">ps</span><span class="p">.</span><span class="n">score</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+        <span class="n">playerScores</span><span class="p">.</span><span class="n">scores</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">ps</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="err">​</span>
+    <span class="c1">// Modify the &quot;PlayerScores&quot; SyncProperty</span>
+    <span class="n">roomPropertyAgent</span><span class="p">.</span><span class="n">Modify</span><span class="p">&lt;</span><span class="n">PlayerScores</span><span class="p">&gt;(</span><span class="s">&quot;PlayerScores&quot;</span><span class="p">,</span> <span class="n">playerScores</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
                 
                   
                 
@@ -499,7 +663,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../introduction/" title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../player-respawn/" title="Player Respawn" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -508,19 +672,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Introduction
+                Player Respawn
               </span>
             </div>
           </a>
         
         
-          <a href="../set-up-the-networkclient/" title="Setting up the NetworkClient" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../win-game/" title="Winning the Game" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Setting up the NetworkClient
+                Winning the Game
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

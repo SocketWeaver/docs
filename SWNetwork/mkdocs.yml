@@ -13,11 +13,14 @@ nav:
       - Introduction: tutorials/top-down/introduction.md
       - Installation: tutorials/top-down/installation.md
       - Setting up the NetworkClient: tutorials/top-down/set-up-the-networkclient.md
-      - Sync Player Transfrom: tutorials/top-down/sync-player-transform.md
+      - Sync Player Transform: tutorials/top-down/sync-player-transform.md
       - Setting up the SceneSpawner: tutorials/top-down/set-up-the-scenespawner.md
       - Test and Play: tutorials/top-down/test-and-play.md
       - Remote Events: tutorials/top-down/remote-events.md
       - SyncProperties: tutorials/top-down/sync-properties.md
+      - Player Respawn: tutorials/top-down/player-respawn.md
+      - Updating Room States: tutorials/top-down/update-room-states.md
+      - Winning the Game: tutorials/top-down/win-game.md
 
 
 # Extensions

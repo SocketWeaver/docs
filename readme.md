@@ -2,6 +2,8 @@
 
 Work in progress...
 
+https://socketweaver.github.io/docs
+
 ## Dependency
 The Documentation is built with **MkDocs** and themed with **Material for MkDocs**.
 
