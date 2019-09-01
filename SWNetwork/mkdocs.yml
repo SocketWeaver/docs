@@ -21,6 +21,13 @@ nav:
       - Player Respawn: tutorials/top-down/player-respawn.md
       - Updating Room States: tutorials/top-down/update-room-states.md
       - Winning the Game: tutorials/top-down/win-game.md
+  - SDK:
+    - NetworkClient:
+      - Overview: sdk/networkclient/overview.md
+      - Configuration: sdk/networkclient/configuration.md
+      - Check-in: sdk/networkclient/checkin.md
+      - Game Servers: sdk/networkclient/gameservers.md
+      - Network Status Events: sdk/networkclient/networkstatusevent.md
 
 
 # Extensions
