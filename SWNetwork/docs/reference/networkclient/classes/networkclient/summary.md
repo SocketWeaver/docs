@@ -1,0 +1,35 @@
+# NetworkClient Class
+
+## Declaration
+
+``` c#
+public class NetworkClient : MonoBehaviour
+```
+
+## Properties
+
+| Name            |     Type     | Description                                                                                                                                                                                                                                                                                                                                                           |
+|-----------------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| VERSION               | string       | SWNetwork SDK version.                                                                                                                                                                                                                                                                                                                                                |
+| Lobby                 | SWLobby      | Lobby instance.                                                                                                                                                                                                                                                                                                                                                       |
+| IsHost                | bool         | Indicates whether the local player is the host of a game. <br><br>IsHost gets set when clients connect to the room game server and is managed by the game server. <br><br>The game server monitors all connected clients. If the current host player got disconnected, the game server will select a new host.                                                                |
+| PlayerId              | string       | Local player's Id.                                                                                                                                                                                                                                                                                                                                                    |
+| LastSpawner           | SceneSpawner | Last SceneSpawner. Usually, it is the SceneSpawner of the last loaded scene.                                                                                                                                                                                                                                                                                          |
+| loggingLevel          | LoggingLevel | Controls the logging of the SWNetwork SDK lower level code. Error is the default setting.                                                                                                                                                                                                                                                                             |
+| Log File Path         | string       | Controls log output directory                                                                                                                                                                                                                                                                                                                                         |
+| Development Player Id | string       | Overrides the playerId for development use. <br><br>On the first launch of a SocketWeaver powered networked game, SWNetwork SDK generates a unique playerId and stores it in the player's device hard drive. <br><br>The playerId is used in the SocketWeaver backend to identify the player. <br><br>For development and testing use, you can manually assign a playerId using this field. |
+| API_KEY               | string       | The APIKEY of your game. It is generated in the SocketWeaver Developer Portal                                                                                                                                                                                                                                                                                         |
+| lobbyName             | string       | Preferred Lobby region name.                                                                                                                                                                                                                                                                                                                                          |
+| nodeRegion1           | string       | Preferred game server region name1.                                                                                                                                                                                                                                                                                                                                   |
+| nodeRegion2           | string       | Preferred game server region name2.                                                                                                                                                                                                                                                                                                                                   |
+
+
+## Methods
+
+| Name                  |                                              Description                                             |
+|-----------------------|----------------------------------------------------------------------------------------------------|
+| ConnectToRoom(Action) | Connects the local player to the room game servers.                                                  |
+| DisconnectFromRoom()  | Disconnects the local player from the room game servers.                                             |
+| CheckIn()             | Checks into the SocketWeaver services with a random unique player Id.                                |
+| CheckIn(string)       | Checks into the SocketWeaver services with the specified playerId. Make sure the playerId is unique. |
+| FindSpawner(UInt16)   | Finds the SceneSpawner with the specified SpawnerId.                                                 |

@@ -28,6 +28,20 @@ nav:
       - Check-in: sdk/networkclient/checkin.md
       - Game Servers: sdk/networkclient/gameservers.md
       - Network Status Events: sdk/networkclient/networkstatusevent.md
+    - Gameplay:
+      - Overview: sdk/gameplay/overview.md
+      - NetworkID: sdk/gameplay/networkid.md
+      - RealtimeAgent: sdk/gameplay/realtimeagent.md
+  - API Reference:
+    - NetworkClient:
+      - Classes:
+        - NetworkClient:
+          - Summary: reference/networkclient/classes/networkclient/summary.md
+          - Methods:
+            - CheckIn(): reference/networkclient/classes/networkclient/checkin.md
+            - ConnectToRoom(Action<bool>): reference/networkclient/classes/networkclient/connecttoroom.md
+            - DisconnectFromRoom(): reference/networkclient/classes/networkclient/disconnectfromroom.md
+            - FinsSpawner(ushort): reference/networkclient/classes/networkclient/findspawner.md
 
 
 # Extensions
